@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="firstchoice.technopear.com.firstchoice.Add_Data">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/btn_color"
+        android:gravity="center"
+        android:text="ADD DATA"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL_addData">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tt1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/edt_companyName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Company Name"
+            android:imeOptions="actionNext"
+            android:inputType="textShortMessage"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:id="@+id/LLSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tt1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/search_popup_bg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <ListView
+                android:id="@+id/LV_Search"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:divider="#e5e5e5"
+                android:dividerHeight="1dp"
+
+                android:fastScrollEnabled="true"
+                android:footerDividersEnabled="true"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LLSearch"
+        android:layout_marginTop="22dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/edt_AmountName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/edt_companyName"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionNext"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tt2"
+        android:layout_marginTop="24dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/edt_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_AmountName"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="Total Box"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tt3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/done" />
+    </RelativeLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
